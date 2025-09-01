@@ -9,7 +9,9 @@
  */
 
 // 导入兼容层
-importScripts("webext-compat.js");
+if (typeof importScripts !== 'undefined') {
+  importScripts("webext-compat.js");
+}
 
 // 确保兼容层可用
 if (typeof webext === "undefined") {
